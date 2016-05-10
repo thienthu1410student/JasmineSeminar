@@ -1,0 +1,24 @@
+{
+  "name": "jasmine_seminar",
+  "version": "1.0.0",
+  "description": "Calculator online using jasmine for testing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thienthu1410student/JasmineSeminar.git"
+  },
+  "keywords": [
+    "calculator",
+    "jasmine",
+    "testing"
+  ],
+  "author": "Bui Pham Thien Thu, Duong Tien, Nguyen Hoang Tin, Trinh Xuan Tien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thienthu1410student/JasmineSeminar/issues"
+  },
+  "homepage": "https://github.com/thienthu1410student/JasmineSeminar#readme"
+}
