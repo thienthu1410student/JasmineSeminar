@@ -1,0 +1,59 @@
+#calculator
+{
+	width: 384px;
+	margin: auto;
+
+}
+
+#calculator #show_area input
+{
+	width: 380px;
+}
+#numpad_buttons
+{
+	width: 230px;
+	float:left;
+}
+
+#numpad_buttons button, #sign_buttons button, #support .clear
+{
+	width: 70px;
+	margin: 2px;
+}
+
+.numpad
+{
+	
+	background-color: #66ccff;
+}
+
+#sign_buttons
+{
+	width:154px;
+	float: left;
+
+}
+
+.sign
+{
+
+	background-color: #00cc66;
+
+}
+.base
+{
+	background-color: #ff6600;
+
+}
+
+#support .clear
+{
+	background-color: #cc99ff;
+}
+
+#support .result
+{
+	background-color: #99cc00;
+	width: 223px;
+	margin: 2px;
+}
