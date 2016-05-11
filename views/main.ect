@@ -4,36 +4,37 @@
 	<link rel="stylesheet" href="bower_components/tether/dist/css/tether.min.css">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
 <body>
 	<div id = "calculator">	
 	<div id = "show_area">
-		<input
+		<input id = "txtFieldString"
 			type = "text"
 			name = "show"
-			value = "Result"
 		/>
 	</div>
 	<div id = "numpad_buttons">	
-  		<button type="button" class="btn numpad">7</button>
-  		<button type="button" class="btn numpad">8</button>
-  		<button type="button" class="btn numpad">9</button>
-  		<button type="button" class="btn numpad">6</button>
-  		<button type="button" class="btn numpad">5</button>
-  		<button type="button" class="btn numpad">6</button>
-  		<button type="button" class="btn numpad">3</button>
-  		<button type="button" class="btn numpad">2</button>
-  		<button type="button" class="btn numpad">1</button>
-  		<button type="button" class="btn numpad">0</button>
-  		<button type="button" class="btn numpad">.</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">7</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">8</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">9</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">6</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">5</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">6</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">3</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">2</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">1</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">0</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">.</button>
   		<button type="button" class="btn base">Decimal</button>
     </div>    
     <div id = "sign_buttons">
-    	<button type="button" class="btn sign">+</button>
-    	<button type="button" class="btn sign">-</button>
-    	<button type="button" class="btn sign">x</button>
-    	<button type="button" class="btn sign">/</button>
-    	<button type="button" class="btn sign">^</button>
-    	<button type="button" class="btn sign">&#x221a</button> <!--square root symbol -->
+    	<button type="button" class="btn sign" onclick="getCharacter(this)">+</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)" >-</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)" >x</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)" >/</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)" >^</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)" >&#x221a</button> <!--square root symbol -->
     	<button type="button" class="btn base">Hexa</button>
     	<button type="button" class="btn base">Binary</button>
 
