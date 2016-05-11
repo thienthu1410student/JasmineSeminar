@@ -1,0 +1,27 @@
+﻿{
+  "name": "jasmine_seminar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ect": "^0.5.9",
+    "express": "^4.13.4"
+    
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thienthu1410student/JasmineSeminar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thienthu1410student/JasmineSeminar/issues"
+  },
+  "homepage": "https://github.com/thienthu1410student/JasmineSeminar#readme"
+}
