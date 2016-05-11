@@ -5,27 +5,29 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script type="text/javascript" src = "scripts/main.js"></script>
 <body>
 	<div id = "calculator">	
 	<div id = "show_area">
 		<input
 			type = "text"
 			name = "show"
-			value = "Result"
+      id = "txtFieldString"
+
 		/>
 	</div>
     <div id = "support_buttons">
-      <button type="button" class="btn support">(</button>
-      <button type="button" class="btn support">)</button>
-      <button type="button" class="btn support">ln</button>
-      <button type="button" class="btn support">log</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)" onkeyup="getCharacter(this)">(</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)" >)</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)">ln</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)" >log</button>
       <button type="button" class="btn support">Dec</button>
       <button type="button" class="btn support">Hex</button>
       <button type="button" class="btn support">Bin</button>
       <button type="button" class="btn support">Oct</button>
       <button type="button" class="btn support">&#x221a</button>
-      <button type="button" class="btn support">sin</button>
-      <button type="button" class="btn support">cos</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)">sin</button>
+      <button type="button" class="btn support" onclick="getCharacter(this)">cos</button>
       <button type="button" class="btn support">tan</button>
       <button type="button" class="btn support">x<sup>2</sup></button>
       <button type="button" class="btn support">x<sup>3</sup></button>
@@ -38,27 +40,27 @@
     </div>
 
     <div id = "numpad_buttons" role="group">
-      <button type="button" class="btn clear">C</button>
+      <button type="button" class="btn clear" onclick="clearAll()">C</button>
       <button type="button" class="btn clear">&plusmn;</button>
       <button type="button" class="btn clear">%</button>
-  		<button type="button" class="btn numpad">7</button>
-  		<button type="button" class="btn numpad">8</button>
-  		<button type="button" class="btn numpad">9</button>
-  		<button type="button" class="btn numpad">4</button>
-  		<button type="button" class="btn numpad">5</button>
-  		<button type="button" class="btn numpad">6</button>
-  		<button type="button" class="btn numpad">1</button>
-  		<button type="button" class="btn numpad">2</button>
-  		<button type="button" class="btn numpad">3</button>
-  		<button type="button" class="btn base">0</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">7</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">8</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">9</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">4</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">5</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">6</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">1</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">2</button>
+  		<button type="button" class="btn numpad" onclick="getCharacter(this)">3</button>
+  		<button type="button" class="btn" id = "zero" onclick="getCharacter(this)">0</button>
   		<button type="button" class="btn numpad">.</button>
     </div> 
 
     <div id = "sign_buttons">
-      <button type="button" class="btn sign">&divide;</button>
-      <button type="button" class="btn sign">&times;</button>
-      <button type="button" class="btn sign">&mdash;</button>
-    	<button type="button" class="btn sign">&#43;</button>
+      <button type="button" class="btn sign" onclick="getCharacter(this)">&divide;</button>
+      <button type="button" class="btn sign" onclick="getCharacter(this)">&times;</button>
+      <button type="button" class="btn sign" onclick="getCharacter(this)">&mdash;</button>
+    	<button type="button" class="btn sign" onclick="getCharacter(this)">&#43;</button>
       <button type="button" class="btn sign">=</button>
     </div>
 
