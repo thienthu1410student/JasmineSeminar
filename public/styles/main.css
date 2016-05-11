@@ -1,13 +1,23 @@
+* {
+  border-radius: 0 !important;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 200;
+}
+
 #calculator
 {
-	width: 384px;
+	width: 560px;
+
 	margin: auto;
 
 }
 
 #calculator #show_area input
 {
-	width: 380px;
+	width: 552px;
 }
 #numpad_buttons
 {
@@ -15,45 +25,68 @@
 	float:left;
 }
 
-#numpad_buttons button, #sign_buttons button, #support .clear
+#numpad_buttons button, #sign_buttons button, #support_buttons button
 {
 	width: 70px;
-	margin: 2px;
 }
 
-.numpad
-{
-	
-	background-color: #66ccff;
+button[type=button] {
+    padding: 15px;
+    margin-top: -1px;
+    margin-left: -5px;
+    display: inline-block;
+    border: 0.5px solid #E8E8E8;
+    box-sizing: border-box;
+    background-color: #F3F3F3;
+    color: #838383;
+    font-size: 1.2em;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 80px;
+    margin-bottom: 1px;
+    margin-left: -5px;
+    display: inline-block;
+    border: 1px solid #FB565A;
+    box-sizing: border-box;
+    background-color: #FB565A;
+    color: white;
+    font-size: 1.5em;
+    direction:RTL;
 }
 
 #sign_buttons
 {
-	width:154px;
+	width: 70px;
 	float: left;
-
+	margin-left: -23px;
 }
 
-.sign
-{
-
-	background-color: #00cc66;
-
-}
-.base
-{
-	background-color: #ff6600;
-
+#numpad_buttons .numpad {
+	background-color: white;
 }
 
-#support .clear
+#numpad_buttons .base
 {
-	background-color: #cc99ff;
+	background-color: white;
+	width: 139px;
 }
 
-#support .result
+#sign_buttons .sign
 {
-	background-color: #99cc00;
-	width: 223px;
-	margin: 2px;
+	color: white;
+	background-color: #FB565A;
+}
+
+#support_buttons
+{
+	width: 275px;
+	float: left;
+}
+
+#support_buttons .support
+{
+	
 }
