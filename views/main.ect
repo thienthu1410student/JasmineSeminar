@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
   
   <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
   <script type="text/javascript" src = "bower_components/mathjs/dist/math.min.js"></script>
   <script type="text/javascript" src = "scripts/main.js"></script>
 <body>
@@ -17,7 +19,7 @@
 			type = "text"
 			name = "show"
       id = "txtFieldString"
-      readOnly
+ 
 
 		/>
 	</div>
@@ -41,7 +43,7 @@
       <button type="button" class="btn degreemode support" onclick = "changeMode(this, 'degreemode')">Rad</button>
       <button type="button" class="btn degreemode chosen" onclick = "changeMode(this, 'degreemode')">Deg</button>
       <button type="button" class="btn support"  value = "!" onclick="getCharacter(this)" >!</button>
-      <button type="button" class="btn support" onclick="getCharacter(this)">&pi;</button>
+      <button type="button" class="btn support" value= "&pi;"= onclick="getCharacter(this)">&pi;</button>
     </div>
 
     <div id = "numpad_buttons" role="group">
