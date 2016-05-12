@@ -1,6 +1,10 @@
 function getCharacter(button)
 {
-	var txtFieldValue = document.getElementById("txtFieldString").value;
-	document.getElementById("txtFieldString").value = txtFieldValue + button.value;
+	txtFieldString.value = txtFieldString.value + button.innerHTML;
+}
+
+function clearAll()
+{
+	document.getElementById("txtFieldString").value = "";
 }
 
