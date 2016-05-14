@@ -14,8 +14,6 @@ app.set('view engine', 'ect');
 app.engine('ect', ectRenderer.render);
 var routes = require('./routes/index');
 
-
-
 app.use('/', routes);
 app.use(express.static('public'));
 
