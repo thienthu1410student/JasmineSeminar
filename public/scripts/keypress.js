@@ -5,6 +5,9 @@ function isNumber(charCode) {
 }
 
 function isHexChar(charCode) {
+	if(base != 16)
+		return false;
+
 	var chr = String.fromCharCode(charCode);
 	chr = chr.toUpperCase();
 	return ('A' <= chr && chr <= 'F');
