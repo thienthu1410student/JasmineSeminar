@@ -42,12 +42,12 @@ function binToHex(s) {
         }
         ret = String(accum) + ret;
     }
-    return ret;
+    return ret.toUpperCase();
 }
 
 function decToHex(n) {
 	if(isDecimal(n.toString()) == false)
 		return "Is not decimal";
 
-	return n.toString(16);	
+	return n.toString(16).toUpperCase();
 }
