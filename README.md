@@ -198,7 +198,7 @@ Danh sách sinh viên:
 	
  		+ toThrow(): Kiểm tra hàm expected_value có văng lỗi hay không.
  		+ toThrowError(errorName): Kiểm tra hàm expected_value có văng lỗi errorName hay không.
-  * Custom Matcher: Ngoài những matcher do Jusmine cung cấp, chúng ta cũng có thể tạo ra matcher cho riêng mình.
+  * Custom Matcher: Ngoài những matcher do Jasmine cung cấp, chúng ta cũng có thể tạo ra matcher cho riêng mình.
   		
 		
 
