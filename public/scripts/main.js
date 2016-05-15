@@ -97,9 +97,24 @@ function Calculator()
 		};
 }
 
+function calHex(expression) {
+	for(i = 0; i < expression.length; i++) 
+		if(isHexChar(expression[i])) {			
+			var k = i;
+			var j = k;
+			var hexString = '';
+			while(j != expression.length && isHexChar(expression[j]))
+				hexString += expression[j++];			
+			var value = hexToDec(hexString);
+			expression = expression.substring(0, k) + value 
+				+ expression.substring(j, expression.length);
+			i = j;
+		}
+	calDec(expression);
+	txtFieldString.value = decToHex(calResult);
+}
 
-function calculate (expression)
-{
+function calDec(expression) {
 	try
 	{
 		var demi, src;
@@ -183,6 +198,21 @@ function calculate (expression)
 
 		isCalculated = true;
 	}
+}
+
+function calculate (expression)
+{
+	switch(base) {
+		case 2:
+			break;
+		case 10:
+			calDec(expression);
+			break;
+		case 16:			
+			calHex(expression)
+			break;
+	}
+	
 }
 
 var compareNumber = {
