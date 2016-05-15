@@ -14,11 +14,14 @@ function toHex() {
 	}
 
 	base = 16;
-	txtFieldString.value = hexString;
+	txtFieldString.value += hexString;
 	calResult = hexString;
 }
 
 function binToHex(s) {
+	if(isBinary(s) == false)
+		return "Is not binary";
+
     var i, k, part, accum, ret = '';
     for (i = s.length-1; i >= 3; i -= 4) {
         part = s.substr(i+1-4, 4);
@@ -43,5 +46,8 @@ function binToHex(s) {
 }
 
 function decToHex(n) {
+	if(isDecimal(n.toString()) == false)
+		return "Is not decimal";
+
 	return n.toString(16);	
 }
