@@ -1,6 +1,8 @@
 var isCalculated = false;
 var minNumber = -999999999999999;
 var maxNumber = 999999999999999;
+var calResult = null;
+var base = 10;
 
 
 function getCharacter(button)
@@ -48,7 +50,7 @@ function changeMode (button, className)
 			break;
 
 		}
-	}
+	}	
 }
 
 function convert(expression, src, dest)
@@ -98,7 +100,6 @@ function Calculator()
 
 function calculate (expression)
 {
-
 	try
 	{
 		var demi, src;
@@ -171,13 +172,12 @@ function calculate (expression)
 	{
 		console.log(expression);
 		if (expression!=="")
-			{
-				
+			{				
 				if (expression.includes("sin") || expression.includes("cos"))
 					txtFieldString.value = txtFieldString.value + " = " + math.round(cal.compute(expression), 2);
 				else
 					txtFieldString.value = txtFieldString.value + " = " + cal.compute(expression);
-
+				calResult = cal.compute(expression);
 			}
 
 
