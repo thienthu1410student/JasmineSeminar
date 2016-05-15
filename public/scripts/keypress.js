@@ -21,13 +21,13 @@ function isValidate(charCode) {
 }
 
 $(document).keypress(function(key) {
-	if(calResult != null) {
-		txtFieldString.value = calResult;
-		calResult = null;
-	}
-
     if(isValidate(key.which)) {
     	txtFieldString.value += String.fromCharCode(key.which).toUpperCase();
+
+    	if(calResult != null) {
+			txtFieldString.value = calResult;
+			calResult = null;
+		}
     }
 });
 
