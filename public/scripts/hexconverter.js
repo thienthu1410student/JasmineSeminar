@@ -14,7 +14,7 @@ function toHex() {
 	}
 
 	base = 16;
-	txtFieldString.value += hexString;
+	txtFieldString.value = hexString;
 	calResult = hexString;
 }
 
