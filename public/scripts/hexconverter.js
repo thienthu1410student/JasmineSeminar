@@ -19,6 +19,9 @@ function toHex() {
 }
 
 function binToHex(s) {
+	if(isBinary(s) == false)
+		return "Is not binary";
+
     var i, k, part, accum, ret = '';
     for (i = s.length-1; i >= 3; i -= 4) {
         part = s.substr(i+1-4, 4);
@@ -39,9 +42,12 @@ function binToHex(s) {
         }
         ret = String(accum) + ret;
     }
-    return ret;
+    return ret.toUpperCase();
 }
 
 function decToHex(n) {
-	return n.toString(16);	
+	if(isDecimal(n.toString()) == false)
+		return "Is not decimal";
+
+	return n.toString(16).toUpperCase();
 }
