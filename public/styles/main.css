@@ -39,7 +39,8 @@ button[type=button] {
     box-sizing: border-box;
     background-color: #F3F3F3;
     color: #838383;
-    font-size: 1.2em;
+    font-size: 0.9em;
+
 }
 
 input[type=text] {
@@ -89,4 +90,9 @@ input[type=text] {
 #support_buttons .support
 {
 	
+}
+
+#support_buttons .chosen
+{
+    background-color: #d6d6f5;
 }
