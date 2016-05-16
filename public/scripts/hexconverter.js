@@ -3,10 +3,10 @@ function toHex() {
 	calculate(document.getElementById('txtFieldString').value);
 	switch(base) {
 		case 2:
-			hexString = binToHex(calResult.toString());
+			hexString = binToHex(txtFieldString.value);
 			break;
 		case 10:
-			hexString = decToHex(calResult);
+			hexString = decToHex(Number(txtFieldString.value));
 			break;	
 		case 16:
 			hexString = txtFieldString.value;		
@@ -15,7 +15,6 @@ function toHex() {
 
 	base = 16;
 	txtFieldString.value = hexString;
-	calResult = hexString;
 }
 
 function binToHex(s) {

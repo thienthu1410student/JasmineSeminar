@@ -1,7 +1,6 @@
 var isCalculated = false;
 var minNumber = -999999999999999;
 var maxNumber = 999999999999999;
-var calResult = null;
 var base = 10;
 
 
@@ -97,9 +96,24 @@ function Calculator()
 		};
 }
 
+function calHex(expression) {
+	for(i = 0; i < expression.length; i++) 
+		if(isHexChar(expression[i])) {			
+			var k = i;
+			var j = k;
+			var hexString = '';
+			while(j != expression.length && isHexChar(expression[j]))
+				hexString += expression[j++];			
+			var value = hexToDec(hexString);
+			expression = expression.substring(0, k) + value 
+				+ expression.substring(j, expression.length);
+			i = j;
+		}
+	calDec(expression);
+	txtFieldString.value = decToHex(Number(txtFieldString.value));
+}
 
-function calculate (expression)
-{
+function calDec(expression) {
 	try
 	{
 		var demi, src;
@@ -174,15 +188,28 @@ function calculate (expression)
 		if (expression!=="")
 			{				
 				if (expression.includes("sin") || expression.includes("cos"))
-					txtFieldString.value = txtFieldString.value + " = " + math.round(cal.compute(expression), 2);
+					txtFieldString.value = math.round(cal.compute(expression), 2);
 				else
-					txtFieldString.value = txtFieldString.value + " = " + cal.compute(expression);
-				calResult = cal.compute(expression);
+					txtFieldString.value = cal.compute(expression);
 			}
-
 
 		isCalculated = true;
 	}
+}
+
+function calculate (expression)
+{
+	switch(base) {
+		case 2:
+			break;
+		case 10:
+			calDec(expression);
+			break;
+		case 16:			
+			calHex(expression)
+			break;
+	}
+	
 }
 
 var compareNumber = {
