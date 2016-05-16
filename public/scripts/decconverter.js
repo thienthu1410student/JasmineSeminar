@@ -15,7 +15,6 @@ function toDec() {
 
 	base = 10;
 	txtFieldString.value = decString;
-	calResult = null;
 }
 
 function binToDec(s) {
