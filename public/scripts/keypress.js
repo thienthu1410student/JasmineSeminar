@@ -4,7 +4,7 @@ function isNumber(charCode) {
 	return ('0' <= chr && chr <= '9');
 }
 
-function isHexChar(charCode) {
+function isInputHexChar(charCode) {
 	if(base != 16)
 		return false;
 
@@ -20,7 +20,7 @@ function isOperant(charCode) {
 }
 
 function isValidate(charCode) {
-	return (isNumber(charCode) || isHexChar(charCode) || isOperant(charCode));	
+	return (isNumber(charCode) || isInputHexChar(charCode) || isOperant(charCode));	
 }
 
 $(document).keypress(function(key) {

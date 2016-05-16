@@ -15,7 +15,7 @@ function toHex() {
 
 	base = 16;
 	txtFieldString.value = hexString;
-	calResult = hexString;
+	calResult = null;
 }
 
 function binToHex(s) {
