@@ -1,7 +1,6 @@
 var isCalculated = false;
 var minNumber = -999999999999999;
 var maxNumber = 999999999999999;
-var calResult = null;
 var base = 10;
 
 
@@ -111,7 +110,7 @@ function calHex(expression) {
 			i = j;
 		}
 	calDec(expression);
-	txtFieldString.value = decToHex(calResult);
+	txtFieldString.value = decToHex(Number(txtFieldString.value));
 }
 
 function calDec(expression) {
@@ -189,12 +188,10 @@ function calDec(expression) {
 		if (expression!=="")
 			{				
 				if (expression.includes("sin") || expression.includes("cos"))
-					txtFieldString.value = txtFieldString.value + " = " + math.round(cal.compute(expression), 2);
+					txtFieldString.value = math.round(cal.compute(expression), 2);
 				else
-					txtFieldString.value = txtFieldString.value + " = " + cal.compute(expression);
-				calResult = cal.compute(expression);
+					txtFieldString.value = cal.compute(expression);
 			}
-
 
 		isCalculated = true;
 	}
