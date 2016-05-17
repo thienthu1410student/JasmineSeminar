@@ -3,7 +3,6 @@ var minNumber = -999999999999999;
 var maxNumber = 999999999999999;
 var base = 10;
 
-
 function getCharacter(button)
 {
 	if (isCalculated === false)
@@ -209,7 +208,6 @@ function calculate (expression)
 			calHex(expression)
 			break;
 	}
-	
 }
 
 var compareNumber = {
