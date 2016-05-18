@@ -112,6 +112,27 @@ function calHex(expression) {
 	txtFieldString.value = decToHex(Number(txtFieldString.value));
 }
 
+function calBin(expression) {
+		var tmpString ="";
+		for(i = 0; i < expression.length; i++) 
+			if(isBinChar(expression[i])) {			
+				var k = i;
+				var j = k;
+				var binString = '';
+				while(j != expression.length && isBinChar(expression[j]))
+					binString += expression[j++];	
+				var value = binToDec(binString);
+				tmpString = tmpString + value;
+				i = j-1;
+			}
+			else
+			{
+				tmpString = tmpString + expression[i];
+			}
+		calDec(tmpString);
+		txtFieldString.value = decToBin(Number(txtFieldString.value));
+	}
+
 function calDec(expression) {
 	try
 	{
@@ -201,12 +222,13 @@ function calculate (expression)
 	expression = calFactorial(expression);
 	switch(base) {
 		case 2:
+			calBin(expression);
 			break;
 		case 10:
 			calDec(expression);
 			break;
 		case 16:			
-			calHex(expression)
+			calHex(expression);
 			break;
 	}	
 }

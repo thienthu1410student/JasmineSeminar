@@ -17,6 +17,7 @@
   <script type="text/javascript" src = "scripts/keypress.js"></script>
   <script type="text/javascript" src = "scripts/hexconverter.js"></script>
   <script type="text/javascript" src = "scripts/decconverter.js"></script>
+  <script type="text/javascript" src = "scripts/binconverter.js"></script>
   <script type="text/javascript" src = "scripts/checker.js"></script>
 <body>
 	<div id = "calculator">	
@@ -38,7 +39,7 @@
       <button type="button" class="btn support"><sup>1</sup>/<sub>x</sub>​</button>
       <button type="button" class="btn basemode chosen" onclick = "changeMode(this, 'basemode'); toDec()">Dec</button>
       <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toHex()">Hex</button>
-      <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode')">Bin</button>
+      <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toBin()">Bin</button>
       <button type="button" class="btn basemode support"onclick = "changeMode(this, 'basemode')">Oct</button>
       <button type="button" class="btn support" value = "&#x221a" onclick="getSpecialCharacter(this)">&#x221a</button>
       <button type="button" class="btn support" value = "sin" onclick="getSpecialCharacter(this)">sin</button>
