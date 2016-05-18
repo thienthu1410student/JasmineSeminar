@@ -3,7 +3,6 @@ var minNumber = -999999999999999;
 var maxNumber = 999999999999999;
 var base = 10;
 
-
 function getCharacter(button)
 {
 	if (isCalculated === false)
@@ -224,7 +223,6 @@ function calFactorial(expression) {
 			var number = expression.substring(i, j);
 			expression = expression.substring(0, i) + "factorial(" + number + ")" + expression.substring(j+1, expression.length);
 	}
-
 	return expression;
 }
 
