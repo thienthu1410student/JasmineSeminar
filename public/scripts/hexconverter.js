@@ -5,6 +5,9 @@ function toHex() {
 		case 2:
 			hexString = binToHex(txtFieldString.value);
 			break;
+        case 8:
+            hexString = octToHex(txtFieldString.value);
+            break;
 		case 10:
 			hexString = decToHex(Number(txtFieldString.value));
 			break;	
@@ -19,7 +22,7 @@ function toHex() {
 
 function binToHex(s) {
 	if(isBinary(s) == false)
-		return "Is not binary";
+		return "Is not Binary";
 
     var i, k, part, accum, ret = '';
     for (i = s.length-1; i >= 3; i -= 4) {
@@ -46,7 +49,14 @@ function binToHex(s) {
 
 function decToHex(n) {
 	if(isDecimal(n.toString()) == false)
-		return "Is not decimal";
+		return "Is not Decimal";
 
 	return n.toString(16).toUpperCase();
+}
+
+function octToHex(s){
+    if (isOct(s) == false)
+        return "Is not Octal";
+    var tmp = parseInt(s, 8);
+    return tmp.toString(16).toUpperCase();
 }

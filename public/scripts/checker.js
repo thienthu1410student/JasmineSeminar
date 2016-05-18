@@ -26,6 +26,15 @@ function isHex(s) {
 	return true;
 }
 
+function isOct(s) {
+	for (i = 0; i < s.length; i++) {
+    	if(s[i] < '0' || s[i] > '7')
+    		return false;
+	}
+
+	return true;
+}
+
 function isHexChar(c) {	
 	if((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F'))
 		return true;
@@ -35,6 +44,12 @@ function isHexChar(c) {
 
 function isBinChar(c){
 	if (c=='0' || c=='1')
+		return true;
+	return false;
+}
+
+function isOctChar(c){
+	if(c >= '0' && c <= '9')
 		return true;
 	return false;
 }

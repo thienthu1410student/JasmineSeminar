@@ -5,6 +5,9 @@ function toBin(){
         case 2:
             result = txtFieldString.value;       
             break;
+        case 8:
+            result = octToBin(txtFieldString.value);
+            break;
         case 10:
             result = decToBin(txtFieldString.value);       
             break;  
@@ -19,13 +22,20 @@ function toBin(){
 
 function hexToBin(s){
     if (isHex(s) == false)
-        return "Is not hex"
+        return "Is not Hex"
     var tmp = hexToDec(s);
     return decToBin(tmp);
 }
 
 function decToBin(s){
-    if (isDecimal(s) == false )
+    if (isDecimal(s) == false)
         return "Is not Decimal"
     return Number(s).toString(2);
+}
+
+function octToBin(s){
+    if (isOct(s) == false)
+        return "Is not Octal";
+    var tmp = parseInt(s, 8);
+    return tmp.toString(2);
 }

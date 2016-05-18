@@ -131,7 +131,28 @@ function calBin(expression) {
 			}
 		calDec(tmpString);
 		txtFieldString.value = decToBin(Number(txtFieldString.value));
-	}
+}
+
+function calOct(expression) {
+		var tmpString ="";
+		for(i = 0; i < expression.length; i++) 
+			if(isOctChar(expression[i])) {		
+				var k = i;
+				var j = k;
+				var octString = '';
+				while(j != expression.length && isOctChar(expression[j]))
+					octString += expression[j++];	
+				var value = octToDec(octString);
+				tmpString = tmpString + value;
+				i = j-1;
+			}
+			else
+			{
+				tmpString = tmpString + expression[i];
+			}
+		calDec(tmpString);
+		txtFieldString.value = decToOct(Number(txtFieldString.value));
+}
 
 function calDec(expression) {
 	try
@@ -223,6 +244,9 @@ function calculate (expression)
 	switch(base) {
 		case 2:
 			calBin(expression);
+			break;
+		case 8:
+			calOct(expression);
 			break;
 		case 10:
 			calDec(expression);
