@@ -112,6 +112,27 @@ function calHex(expression) {
 	txtFieldString.value = decToHex(Number(txtFieldString.value));
 }
 
+function calBin(expression) {
+		var tmpString ="";
+		for(i = 0; i < expression.length; i++) 
+			if(isBinChar(expression[i])) {			
+				var k = i;
+				var j = k;
+				var binString = '';
+				while(j != expression.length && isBinChar(expression[j]))
+					binString += expression[j++];	
+				var value = binToDec(binString);
+				tmpString = tmpString + value;
+				i = j-1;
+			}
+			else
+			{
+				tmpString = tmpString + expression[i];
+			}
+		calDec(tmpString);
+		txtFieldString.value = decToBin(Number(txtFieldString.value));
+	}
+
 function calDec(expression) {
 	try
 	{
@@ -198,16 +219,33 @@ function calDec(expression) {
 
 function calculate (expression)
 {
+	expression = calFactorial(expression);
 	switch(base) {
 		case 2:
+			calBin(expression);
 			break;
 		case 10:
 			calDec(expression);
 			break;
 		case 16:			
-			calHex(expression)
+			calHex(expression);
 			break;
+	}	
+}
+
+function calFactorial(expression) {
+	while(expression.indexOf("!") != -1) {
+		var j = expression.indexOf("!");
+		var i;
+		for(i = j; i > 0; i--)
+			if(isOperant(expression[i])) {
+				i++;
+				break;
+			}
+			var number = expression.substring(i, j);
+			expression = expression.substring(0, i) + "factorial(" + number + ")" + expression.substring(j+1, expression.length);
 	}
+	return expression;
 }
 
 var compareNumber = {

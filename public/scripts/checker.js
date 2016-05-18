@@ -31,3 +31,10 @@ function isHexChar(c) {
 		return true;
 	return false;	    	
 }
+
+
+function isBinChar(c){
+	if (c=='0' || c=='1')
+		return true;
+	return false;
+}
