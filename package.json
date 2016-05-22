@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/thienthu1410student/JasmineSeminar/issues"
   },
+  "engines": {
+  "node": "4.4.2"
+},
   "homepage": "https://github.com/thienthu1410student/JasmineSeminar#readme"
 }
