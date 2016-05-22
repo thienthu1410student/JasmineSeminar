@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="bower_components/tether/dist/css/tether.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+  <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script type="text/javascript" src = "bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
+  <script type="text/javascript" src = "bower_components/mathjs/dist/math.min.js"></script>
+  <script type="text/javascript" src = "bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script type="text/javascript" src = "scripts/main.js"></script>
+  <script type="text/javascript" src = "scripts/keypress.js"></script>
+  <script type="text/javascript" src = "scripts/hexconverter.js"></script>
+  <script type="text/javascript" src = "scripts/decconverter.js"></script>
+  <script type="text/javascript" src = "scripts/binconverter.js"></script>
+  <script type="text/javascript" src = "scripts/octconverter.js"></script>
+  <script type="text/javascript" src = "scripts/checker.js"></script>
+<body>
+	<div id = "calculator">	
+	<div id = "show_area">
+		<input
+			type = "text"
+			name = "show"
+      id = "txtFieldString"
+		/>
+	</div>
+    <div id = "support_buttons">                 
+      <button type="button" class="btn support" value = "(" onclick="getCharacter(this)">(</button>
+      <button type="button" class="btn support" value = ")" onclick="getCharacter(this)" >)</button>
+      <button type="button" class="btn support" value = "%" onclick="getCharacter(this)">%</button>
+      <button type="button" class="btn support">&#8592;</button>
+      <button type="button" class="btn support" value = "ln"onclick="getSpecialCharacter(this)">ln</button>
+      <button type="button" class="btn support" value = "log"onclick="getSpecialCharacter(this)" >log(x, b)</button>
+      <button type="button" class="btn support" value = "," onclick="getCharacter(this)">,</button>
+      <button type="button" class="btn support"><sup>1</sup>/<sub>x</sub>​</button>
+      <button type="button" class="btn basemode chosen" onclick = "changeMode(this, 'basemode'); toDec()">Dec</button>
+      <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toHex()">Hex</button>
+      <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toBin()">Bin</button>
+      <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toOct()">Oct</button>
+      <button type="button" class="btn support" value = "&#x221a" onclick="getSpecialCharacter(this)">&#x221a</button>
+      <button type="button" class="btn support" value = "sin" onclick="getSpecialCharacter(this)">sin</button>
+      <button type="button" class="btn support" value = "cos" onclick="getSpecialCharacter(this)">cos</button>
+      <button type="button" class="btn support" value = "tan" onclick="getSpecialCharacter(this)">tan</button>
+      <button type="button" class="btn support" value = "^2" onclick="getCharacter(this)">x<sup>2</sup></button>
+      <button type="button" class="btn support" value = "^3" onclick="getCharacter(this)">x<sup>3</sup></button>
+      <button type="button" class="btn support" value = "^" onclick="getCharacter(this)">x<sup>y</sup></button>
+      <button type="button" class="btn support"  value = "e^" onclick="getCharacter(this)">e<sup>x</sup></button>
+      <button type="button" class="btn degreemode support" onclick = "changeMode(this, 'degreemode')">Rad</button>
+      <button type="button" class="btn degreemode chosen" onclick = "changeMode(this, 'degreemode')">Deg</button>
+      <button type="button" class="btn support"  value = "!" onclick="getCharacter(this)" >!</button>
+      <button type="button" class="btn support" value= "&pi;"= onclick="getCharacter(this)">&pi;</button>
+    </div>
+
+    <div id = "numpad_buttons" role="group">
+    <!-- New button!!!! !-->
+
+      <button type="button" class="btn clear" value = "A" onclick="getCharacter(this)">A</button>
+      <button type="button" class="btn clear" value = "B" onclick="getCharacter(this)">B</button>
+      <button type="button" class="btn clear" value = "C" onclick="getCharacter(this)">C</button>
+      <button type="button" class="btn clear" value = "D" onclick="getCharacter(this)">D</button>
+      <button type="button" class="btn clear" value = "E" onclick="getCharacter(this)">E</button>
+      <button type="button" class="btn clear" value = "F" onclick="getCharacter(this)">F</button>
+      
+      
+  		<button type="button" class="btn numpad" value = "7" onclick="getCharacter(this)">7</button>
+  		<button type="button" class="btn numpad" value = "8" onclick="getCharacter(this)">8</button>
+  		<button type="button" class="btn numpad" value = "9" onclick="getCharacter(this)">9</button>
+  		<button type="button" class="btn numpad" value = "4" onclick="getCharacter(this)">4</button>
+  		<button type="button" class="btn numpad" value = "5" onclick="getCharacter(this)">5</button>
+  		<button type="button" class="btn numpad" value = "6" onclick="getCharacter(this)">6</button>
+  		<button type="button" class="btn numpad" value = "1" onclick="getCharacter(this)">1</button>
+  		<button type="button" class="btn numpad" value = "2" onclick="getCharacter(this)">2</button>
+  		<button type="button" class="btn numpad" value = "3" onclick="getCharacter(this)">3</button>
+  		<button type="button" class="btn" id = "zero" value = "0" onclick="getCharacter(this)">0</button>
+  		<button type="button" class="btn numpad" value = "." onclick="getCharacter(this)">.</button>
+    </div> 
+
+    <div id = "sign_buttons">
+      <button type="button" class="btn sign" onclick="clearAll()">Clear</button>
+      <button type="button" class="btn sign" value = "&divide;" onclick="getCharacter(this)">&divide;</button>
+      <button type="button" class="btn sign" value = "&times;" onclick="getCharacter(this)">&times;</button>
+      <button type="button" class="btn sign" value = "-" onclick="getCharacter(this)">-</button>
+    	<button type="button" class="btn sign" value = "+" onclick="getCharacter(this)">+</button>
+      <button type="button" class="btn sign" onclick="calculate(document.getElementById('txtFieldString').value)">=</button>
+    </div>
+
+
+   </div>
+</body>
+  <link rel="stylesheet" type="text/css" href="bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+</html>
