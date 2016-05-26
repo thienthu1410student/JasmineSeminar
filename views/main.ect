@@ -14,6 +14,7 @@
   <script type="text/javascript" src = "bower_components/jquery/dist/jquery.min.js"></script>
 
   <script type="text/javascript" src = "scripts/main.js"></script>
+   <script type="text/javascript" src = "scripts/test.js"></script>
   <script type="text/javascript" src = "scripts/keypress.js"></script>
   <script type="text/javascript" src = "scripts/hexconverter.js"></script>
   <script type="text/javascript" src = "scripts/decconverter.js"></script>
@@ -33,11 +34,11 @@
       <button type="button" class="btn support" value = "(" onclick="getCharacter(this)">(</button>
       <button type="button" class="btn support" value = ")" onclick="getCharacter(this)" >)</button>
       <button type="button" class="btn support" value = "%" onclick="getCharacter(this)">%</button>
-      <button type="button" class="btn support">&#8592;</button>
+      <button type="button" class="btn support" onclick="backSpace()">&#8592;</button>
       <button type="button" class="btn support" value = "ln"onclick="getSpecialCharacter(this)">ln</button>
       <button type="button" class="btn support" value = "log"onclick="getSpecialCharacter(this)" >log(x, b)</button>
       <button type="button" class="btn support" value = "," onclick="getCharacter(this)">,</button>
-      <button type="button" class="btn support"><sup>1</sup>/<sub>x</sub>​</button>
+      <button type="button" class="btn support" value = "1/" onclick = "getCharacter(this)"><sup>1</sup>/<sub>x</sub>​</button>
       <button type="button" class="btn basemode chosen" onclick = "changeMode(this, 'basemode'); toDec()">Dec</button>
       <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toHex()">Hex</button>
       <button type="button" class="btn basemode support" onclick = "changeMode(this, 'basemode'); toBin()">Bin</button>
