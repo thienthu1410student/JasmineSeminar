@@ -34,7 +34,7 @@ Video demo
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ##B.Nội dung tìm hiểu
-## 1. Unit Test
+## I. Unit Test
 - Được thực hiện bởi developer.
 - Mục đích là để chứng minh tính đúng đắn của các hàm.
 - Các hoạt động unit test:
@@ -51,7 +51,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
  chưa được xây dựng hoàn chỉnh. Mock chính là kỹ thuật giúp chúng ta giả lập module A, đủ để test module B, không cần phải đợi module A hoàn chỉnh.
 
 
-## 2. Jasmine 
+## II. Jasmine 
 - Là một framework dùng để thực hiện kiểm thử đơn vị trên những đoạn code JavaScript.
 - Được xây dựng theo mô hình BDD.
 - Các khái niệm:
@@ -603,7 +603,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 		});
 			----------
 
-##III. Xử lý bất đồng bộ:
+- Xử lý bất đồng bộ:
  + Jasmine cung cấp hàm `setTimeout` và `setInterval` để giả lập những hàm liên quan đến thời gian phản hồi.
 		
 			----------
@@ -741,7 +741,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 			});
 		----------
 
-##IV. Tài liệu tham khảo:
+##III. Tài liệu tham khảo:
 + [http://jasmine.github.io/2.0/introduction.html](http://jasmine.github.io/2.0/introduction.html).
 + [http://jasmine.github.io/2.0/custom_matcher.html](http://jasmine.github.io/2.0/custom_matcher.html).
 + [https://volaresystems.com/blog/post/2014/12/09/Testing-async-calls-with-Jasmine](https://volaresystems.com/blog/post/2014/12/09/Testing-async-calls-with-Jasmine).
