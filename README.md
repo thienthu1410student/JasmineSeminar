@@ -12,7 +12,28 @@ Danh sách sinh viên:
 **1312600 - Nguyễn Hoàng Tín**
 
 URL: **https://jasmineseminar-calculator.herokuapp.com/**
-##
+##A. Tổng quan:
+**Chức năng đã làm**
+* [x] Tính toán biểu thức liên quan đến +, -, *, /, !, log, ln, ^, căn bậc 2, lượng giác
+* [x] Chuyển đổi cơ số Bin, Hex, Dec, Oct
+* [x] Xuất thông báo lỗi với nhiều loại lỗi khác nhau (lỗi syntax, lỗi tràn số, lỗi cơ số)
+* [x] Xóa tất cả ký tự trong biểu thức
+* [x] Xóa ký tự cuối của biểu thức
+* [x] Sử dụng bàn phím để nhập các ký tự số, chữ (A đến F), tính toán kết quả
+
+**Những việc đã làm có sử dụng jasmine**
+* [x] Viết 1 số test case kiểm tra giá trị biên
+* [x] Viết test case kiểm tra một số biểu thức tính toán
+* [x] Viết custom matcher để so sánh 2 số thực
+* [x] Sử dụng kỹ thuật spy để kiểm tra các loại lỗi
+* [x] Sử dụng kỹ thuật spy để giả lập 1 hàm chuyển đổi cơ số
+
+Video demo
+![Video Walkthrough](demo.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+##B.Nội dung tìm hiểu
 ## 1. Unit Test
 - Được thực hiện bởi developer.
 - Mục đích là để chứng minh tính đúng đắn của các hàm.
@@ -35,7 +56,7 @@ URL: **https://jasmineseminar-calculator.herokuapp.com/**
 - Được xây dựng theo mô hình BDD.
 - Các khái niệm:
  + *Spec Suite*: 
- 		+ Một bộ kịch bản test, bao gồm nhiều hàm testq. 
+ 		+ Một bộ kịch bản test, bao gồm nhiều hàm test case. 
   		+ Jasmine sử dụng hàm describe() để định nghĩa 1 Spec Suite. Trong 1 Spec Suite, có thể có chứa những Spec Suite khác.
   		+ Nếu chúng ta không muốn xem kết quả của 1 Spec Suite, ta thay lệnh describe() bằng lệnh xdescribe().
  + *Spec*: 
@@ -728,9 +749,7 @@ URL: **https://jasmineseminar-calculator.herokuapp.com/**
 + [http://mathjs.org/](http://mathjs.org/)
  
  
-## Notes
 
-Describe any challenges encountered while building the app.
 
 ## License
 
